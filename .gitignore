@@ -1,0 +1,40 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables file
+.env
+
+# Mac OS
+.DS_Store
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# npm configuration
+.npmrc
+
+# Production build
+/build/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Yarn
+yarn-error.log
+.pnp.*
+yarn-debug.log
+/.pnp/
