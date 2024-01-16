@@ -4,11 +4,10 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 
-const ShowTask = () => {
+const ShowTask = (props) => {
   const [todo,setTodo] = useState({});
   const [loading,setLoading] = useState(false);
-  const {id} = useParams();
-  
+  const { id } = useParams();
   useEffect(() => {
     setLoading(true);
     axios.get(`http://localhost:5000/todos/${id}`)
@@ -23,13 +22,11 @@ const ShowTask = () => {
   }, [])
 
   return (
-    <div className='p-4'>
+    <div className='p-4 bg-gray-900 text-white shadow-lg h-screen'>
       <BackButton/>
       <h1 className='text-3xl my-4'>Show task</h1>
-      { loading ? (
-        <Spinner/>
-      ) : (
-        <div className='flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4'>
+      { loading ? (<Spinner/>) : (
+        <div className='flex flex-col border-2 border-sky-700 rounded-xl w-fit p-4'>
           <div className='my-4'><span className='text-xl mr-4 text-gray-500'>ID</span> <span>{todo._id}</span></div>
           <div className='my-4'><span className='text-xl mr-4 text-gray-500'>Content</span><span>{todo.content}</span></div>
           <div className='my-4'><span className='text-xl mr-4 text-gray-500'>isCompleted</span><span>{todo.isCompleted}</span></div>

@@ -64,17 +64,17 @@ router.put('/:id', async (request,response) => {
 });
 
 // route to delete todo
-router.delete('/:id', async (request,reponse) => {
+router.delete('/:id', async (request,response) => {
     try {
         const {id} = request.params;
         const result = await Todo.findByIdAndDelete(id)
         if (!result) {
-            return reponse.status(404).send({message : "todo not found"})
+            return response.status(404).send({message : "todo not found"})
         }
-        return reponse.status(201).send({message : "todo deleted successfully"})
+        return response.status(201).send({message : "todo deleted successfully"})
     } catch (error) {
         console.log(error.message)
-        reponse.status(500).send({message : error.message})
+        response.status(500).send({message : error.message})
     }
 });
 

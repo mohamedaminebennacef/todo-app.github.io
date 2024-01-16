@@ -3,7 +3,6 @@ import {Routes,Route} from 'react-router-dom';
 import Home from './pages/Home';
 import CreateTask from './pages/CreateTask';
 import ShowTask from './pages/ShowTask';
-import ShowTasks from './pages/ShowTasks';
 import UpdateTask from './pages/UpdateTask';
 import DeleteTask from './pages/DeleteTask';
 
