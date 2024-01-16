@@ -37,7 +37,7 @@ const Home = () => {
         <button className='bg-sky-700 hover:bg-sky-600 px-4 py-1 rounded-lg' onClick={() => setShowType('card')}>Card</button>
       </div>
       <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Todo List</h1>
+        <h1 className='text-3xl my-8'>Task List</h1>
         <Link to='/todos/create'>
         <RiAddCircleFill size = "40" />
 
